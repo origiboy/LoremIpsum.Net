@@ -1,0 +1,92 @@
+/* additional */
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: inherit;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: inherit;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: inherit;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: inherit;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: inherit;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+    color: inherit;
+}
+
+.form__input-file {
+	position: relative;
+	display: inline-block;
+    padding-left: 0px;
+    border-radius: 4px;
+}
+.form__input-file span {
+	position: relative;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	width: 100%;
+    height: 100%;
+	margin: 0;
+	transition: background-color 0.2s linear, opacity 0.2s linear, color 0.2s linear;
+    background: #FFFFFF;
+    border: 2px solid #3E9CDC;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #272733;
+
+    svg {
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+.form__input-file input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+ 
+/* Focus */
+ 
+/* Hover/active */
+.form__input-file:hover span {
+	background-color: #3E9CDC;
+    color: #FFFFFF;
+}
+
+.form__input-file:active span {
+	background-color: #3E9CDC;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+.form__input-file path {
+    transition: fill 0.2s linear;
+}
+
+.form__input-file:hover path, .form__input-file:active path {
+	fill: #FFFFFF;
+}
+ 
+/* Disabled */
+.form__input-file input[type=file]:disabled + span {
+	background-color: #eee;
+}

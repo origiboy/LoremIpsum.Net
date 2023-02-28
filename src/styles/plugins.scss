@@ -1,0 +1,145 @@
+.choices {
+    width: calc(33.333% - 20px);
+    height: 48px;
+    margin: 0px;
+    margin-bottom: 30px;
+    transition: opacity 0.2s linear;
+}
+
+.choices__inner {
+    height: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #272733;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.is-open .choices__inner {
+    background: rgba(61, 64, 80, 0.85);
+    color: #FFFFFF;
+}
+
+.choices__placeholder {
+    opacity: 1;
+}
+
+.choices[data-type*=select-one]::after {
+    width: 11px;
+    height: 6px;
+    border: none;
+    background-image: url(../assets/images/arrow_down.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.choices[data-type*=select-one].is-open::after {
+    margin-top: -3px;
+    background-image: url(../assets/images/arrow_up.svg);
+}
+
+.choices__list--dropdown [data-id="1"] {
+    display: none;
+}
+
+.choices__list--dropdown, .choices__list[aria-expanded] {
+    color: #FFFFFF;
+    background: rgba(39, 39, 51, 0.9);
+    border: 1px solid #3D4050;
+}
+
+.is-highlighted {
+    background-color: none;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded].choices__item--selectable.is-highlighted {
+    background: none!important;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded].choices__item--selectable.is-highlighted {
+    color: #42A9ED;
+}
+
+.is-open .choices__list--dropdown, .choices__list[aria-expanded] {
+    background: rgba(39, 39, 51, 0.9)!important;
+    border: 1px solid #3D4050!important;
+}
+
+.is-focused .choices__inner, .is-open .choices__inner {
+    border: 1px solid #3D4050!important;
+}
+
+.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {
+    font-size: 18px;
+}
+
+.choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable {
+    padding-right: 10px;
+}
+
+/* input */
+
+input[type=range] {
+    -webkit-appearance: none; /* Скрывает слайдер, чтобы можно было создать свой */
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+    outline: none; /* Убирает голубую границу у элемента. Хотя, возможно, и стоит создавать некоторое оформления для состояния фокуса в целях обеспечения доступности. */
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    color: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: #42A9ED;
+    border: 3px solid #286690;
+    cursor: pointer;
+    
+}
+
+/* Тоже самое для Firefox */
+input[type=range]::-moz-range-thumb {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: #42A9ED;
+    border: 3px solid #286690;
+    cursor: pointer;
+}
+
+/* Тоже самое для IE */
+input[type=range]::-ms-thumb {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: #42A9ED;
+    border: 3px solid #286690;
+    cursor: pointer;
+}

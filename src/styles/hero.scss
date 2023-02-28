@@ -1,0 +1,101 @@
+.hero {
+    width: 100%;
+    min-height: 850px;
+    padding-top: 203px;
+    padding-bottom: 203px;
+    background-image: url(../assets/images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__heading {
+        max-width: 780px;
+        margin-top: 0px;
+        margin-bottom: 90px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;
+        text-transform: uppercase;
+        color: #000000;
+    }
+
+    &__heading--blue {
+        color: #3E9CDC;
+    }
+
+    &__info {
+        max-width: 534px;
+    }
+
+    &__heading--small {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #000000;
+    }
+
+    &__list {
+        margin-bottom: 80px;
+    }
+
+    &__list-point {
+        position: relative;
+        padding-left: 25px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: #000000;
+
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 5px;
+            height: 1.5px;
+            background: #000000;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+    }
+
+    &__button-order {
+        margin-right: 30px;
+        padding: 12px 56px;
+        background: #3E9CDC;
+        border: 1px solid #FFFFFF;
+        border-radius: 4px;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+
+    &__button-detailed {
+        padding: 12px 49px;
+        background: #FFFFFF;
+        border: 1px solid #6F6D7B;
+        border-radius: 4px;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: #2A2B30;
+    }
+}
